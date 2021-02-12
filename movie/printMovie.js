@@ -8,7 +8,7 @@ function printMovie(x, intent, fb, ds){
   }
   else{
     if(x.many){
-    fb.txt(ds,'I have many movies corresponding to this movie. I choose one of these, if it is not the one, be more specific.');
+    fb.txt(ds,'I have many movies corresponding to this movie. I choose one of these, if it is not the one, be more specific or try to search with the original title.');
     }
     
 

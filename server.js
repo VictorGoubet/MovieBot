@@ -19,8 +19,10 @@ const launch_server = () =>{
 
   server.post('/', (req, res, data) => FB.incoming(req, res, async data => {
     data = FB.messageHandler(data);
-    console.log(data)
-    mapIntent(data, FB)
+    if(data!=undefined){
+      mapIntent(data, FB) 
+    }
+    
     }));
   
   server.listen(PORT, () => console.log(`The bot server is running on port ${PORT}`));
@@ -29,9 +31,9 @@ const launch_server = () =>{
 module.exports = launch_server;
 
 
-//order by popularity 
 //pb avec apostrophe et é etc
-// replace query classic
+
+//https://moviebotesilv.herokuapp.com/
 
 
 /*
@@ -40,5 +42,4 @@ Q: who directed the untouchable?
 Q: when was the untouchable released?
 Q: tell me about the spider man (2007)
 Q: tell me about the spider man (2012)
-
 */

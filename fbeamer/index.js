@@ -55,25 +55,28 @@ class FBeamer{
   messageHandler(obj){
     let sender = obj.sender.id;
     let message = obj.message; 
-    let nlp = message.nlp
-    let entities = {}
-    let intent 
-    if(nlp.intents.length>0 && nlp.intents[0].confidence>0.8){
-      Object.values(nlp.entities).forEach(x=>{entities[x[0].name]=x[0].value})
-      intent = nlp.intents[0].name
-    }
-    
-
-    if (message.text){
-      let obj = { sender ,
-            type: 'text',
-            content : message.text,
-            intent,
-            entities
-
+    let x;
+    if(message.text){
+      let nlp = message.nlp
+      let entities = {}
+      let intent 
+      if(nlp.intents.length>0 && nlp.intents[0].confidence>0.8){
+        Object.values(nlp.entities).forEach(x=>{entities[x[0].name]=x[0].value})
+        intent = nlp.intents[0].name
       }
-      return obj; 
+
+       x = { sender ,
+              type: 'text',
+              content : message.text,
+              intent,
+              entities}
     }
+    else{
+      this.txt(sender, 'This image looks great ! See mind:')
+      this.img(sender, 'https://i.imgflip.com/wmbw6.jpg')
+    }
+    return x; 
+    
   }
  
   incoming(req, res, cb) { 
