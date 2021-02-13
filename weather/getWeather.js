@@ -11,7 +11,7 @@ const getWeather = (location) => {
     let after_tomorrow = dateformat(new Date(today.getTime() + 2*1000*3600*24), "yyyy-m-dd");
     today = dateformat(today, "yyyy-m-dd");
     apiurl = apiurl+location+`/${yesterday}/${after_tomorrow}`
-    
+    console.log(apiurl)
     return new Promise(async (resolve, reject)=>{
         try{
             const weatherConditions = await axios.get(
