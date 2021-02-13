@@ -1,9 +1,9 @@
 'use strict';
+
 const config = require('./config');
 const fbeamer = require('./fbeamer/index');
 const express = require('express');
 const bp = require('body-parser');
-
 const mapIntent = require('./map_intent')
 
 const FB = new fbeamer(config.FB);
@@ -22,7 +22,6 @@ const launch_server = () =>{
     if(data!=undefined){
       mapIntent(data, FB) 
     }
-    
     }));
   
   server.listen(PORT, () => console.log(`The bot server is running on port ${PORT}`));
