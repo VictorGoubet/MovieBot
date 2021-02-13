@@ -29,17 +29,3 @@ const launch_server = () =>{
 }
 
 module.exports = launch_server;
-
-
-//pb avec apostrophe et é etc
-
-//https://moviebotesilv.herokuapp.com/
-
-
-/*
-Q: tell me about the untouchable
-Q: who directed the untouchable?
-Q: when was the untouchable released?
-Q: tell me about the spider man (2007)
-Q: tell me about the spider man (2012)
-*/

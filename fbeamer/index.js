@@ -72,7 +72,7 @@ class FBeamer{
               entities}
     }
     else{
-      this.txt(sender, 'This image looks great ! See mind:')
+      this.txt(sender, 'This image looks great ! See mine:')
       this.img(sender, 'https://i.imgflip.com/wmbw6.jpg')
     }
     return x; 
