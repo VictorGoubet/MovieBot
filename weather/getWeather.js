@@ -11,7 +11,7 @@ const getWeather = (location) => {
     today = dateformat(today, "yyyy-m-dd");
 
     apiurl = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${yesterday}/${after_tomorrow}`
-    console.log(apiurl)
+
     return new Promise(async (resolve, reject)=>{
         try{
             const weatherConditions = await axios.get(

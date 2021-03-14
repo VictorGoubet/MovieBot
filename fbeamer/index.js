@@ -60,7 +60,7 @@ class FBeamer{
       let nlp = message.nlp
       let entities = {}
       let intent 
-      if(nlp.intents.length>0 && nlp.intents[0].confidence>0.8){
+      if(nlp.intents.length>0 && nlp.intents[0].confidence>0.6){
         Object.values(nlp.entities).forEach(x=>{entities[x[0].name]=x[0].value})
         intent = nlp.intents[0].name
       }

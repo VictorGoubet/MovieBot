@@ -1,0 +1,23 @@
+=========HINT=========
+[x] -> full mark
+[-] -> partial mark
+[ ] -> no mark
+>>> -> comment
+======================
+
+[x] correct link to messenger
+[x] correct join link format
+[-] tell me about the love actually
+    >>> your chatbot can not recognize movies with "the" maybe it is because you didn't train it well
+[x] when was the love actually released?
+[-] who directed the  johnny english
+[-] tell me about the johnny english (2003)
+[ ] tell me about the johnny english 2003
+[-] tell me about the johnny english (2018)
+[x] Give some hints to use the bot in the beginning of the conversation
+[x] Respectfully answer if it does not understand the input
+[x] Our chatbot also provides image in responses
+[x] Our chatbot secure information are saved in .ENV file
+[x] I have secured the webhooks (q14 of Week 3)
+[x] Our chatbot is hosted also on Heroku
+[ ] Extra mark
